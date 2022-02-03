@@ -6,6 +6,7 @@ import * as serviceWorkerRegister from './serviceWorkerRegister'
 import App from './App'
 
 import theme from './theme'
+import 'animate.css'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,4 +17,4 @@ ReactDOM.render(
   document.getElementById('root')
 )
 
-serviceWorkerRegister.unregister()
+serviceWorkerRegister.register()

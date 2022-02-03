@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
 import { MdAddTask, MdCheckCircle, MdRadioButtonUnchecked } from 'react-icons/md'
-import { FaTrash } from 'react-icons/fa'
+import { FaAd, FaTrash } from 'react-icons/fa'
 
 import logo from './logo.svg'
 
@@ -41,6 +41,7 @@ function App() {
       created: Date.now.toString()
     },
   ])
+
   const uid: string = uuidv4()
 
   const handleAddTask = (e: any) => {
@@ -142,6 +143,7 @@ function App() {
                       <Flex 
                         justifyContent="space-between" 
                         alignItems="center" 
+                        className="animate__bounceIn"
                         flexDirection={["column", "row"]}
                       >
                         <Box alignContent="baseline">
@@ -166,8 +168,9 @@ function App() {
                             colorScheme="red" 
                             onClick={ handleDelTask(task.id) }
                           >
-                              <TagLeftIcon as={ FaTrash } /> 
-                              <TagLabel>delete</TagLabel>
+                            <TagLabel>
+                              <FaTrash />
+                            </TagLabel>
                           </Tag>
                         </Stack>
                       </Flex>
