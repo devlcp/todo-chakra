@@ -1,6 +1,6 @@
 export function register(){
   if(navigator.serviceWorker){
-    navigator.serviceWorker.register('./sw.ts')
+    navigator.serviceWorker.register('./sw.js')
       .then(reg => {
       }).catch(err => {
         console.log(err.response)
