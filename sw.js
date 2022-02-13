@@ -1,18 +1,13 @@
 const CACHE_ELEMENTS = [
     "./",
     "./src/logo.svg",
-    "./favicon.png",
+    "./src/favicon.png",
     "./src/main.tsx",
     "./src/serviceWorkerRegister.ts",
     "./sw.ts",
-    "./manifest.json",
-    "./ios/",
-    "./android/",
-    "./src/App.tsx",
-    "./src/theme.ts",
 ]
 
-const CACHE_NAME = "v2_todo"
+const CACHE_NAME = "v1_todo"
 
 self.addEventListener( "install", (e) => {
     e.waitUntil(
